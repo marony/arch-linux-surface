@@ -5,7 +5,7 @@
 # User did not enter a major version selection, prompt for one
 if [ "$1" = "" ]; then
   echo "Which kernel version do you want to build?"
-  select major_version in "4.19" "5.0"; do
+  select major_version in "4.19" "5.1"; do
     break;
   done
 else
@@ -15,10 +15,10 @@ fi
 # Convert major version (e.g. 4.14) to full version (e.g. 4.14.40)
 case $major_version in
   "4.19")
-    version="4.19.37"
+    version="4.19.48"
     ;;
-  "5.0")
-    version="5.0.10"
+  "5.1")
+    version="5.1.7"
     ;;
   *)
     echo "Invalid selection!"
